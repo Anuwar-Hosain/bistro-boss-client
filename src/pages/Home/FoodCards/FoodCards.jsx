@@ -11,8 +11,8 @@ const FoodCards = () => {
         subHeading="CHEF RECOMMENDS"
       ></SectionTitle>
       <div className="size grid grid-cols-3  justify-center">
-        {array.map((a) => (
-          <>
+        {array.map((a, i) => (
+          <div key={i}>
             <div className="card w-96 bg-[#F3F3F3;] text-black text-center shadow-xl  my-14">
               <figure>
                 <img src={img} alt="Shoes" className="w-full h-72" />
@@ -30,7 +30,7 @@ const FoodCards = () => {
                 </div>
               </div>
             </div>
-          </>
+          </div>
         ))}
       </div>
     </>

@@ -8,7 +8,6 @@ import Cover from "../../Shared/Cover/Cover";
 import SectionTitle from "../../../components/SectionTitle/SectionTitle";
 import useMenu from "../../../hooks/useMenu";
 import MenuCategory from "../MenuCategory/MenuCategory";
-import Button from "../../../components/Button/Button";
 
 const Menu = () => {
   const [menu] = useMenu();
@@ -32,10 +31,7 @@ const Menu = () => {
         subHeading="Don't miss"
       ></SectionTitle>
       <div className="size margin">
-        <MenuCategory items={offered}></MenuCategory>
-        <div className="text-center ">
-          <Button name="ORDER YOUR FAVOURITE FOOD"></Button>
-        </div>
+        <MenuCategory items={offered} title="offered"></MenuCategory>
       </div>
       {/* dessert items */}
       <Cover
@@ -44,10 +40,7 @@ const Menu = () => {
         para="Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
       ></Cover>
       <div className="size margin">
-        <MenuCategory items={desserts}></MenuCategory>
-        <div className="text-center ">
-          <Button name="ORDER YOUR FAVOURITE FOOD"></Button>
-        </div>
+        <MenuCategory items={desserts} title="desserts"></MenuCategory>
       </div>
       {/* pizza items */}
       <Cover
@@ -56,10 +49,7 @@ const Menu = () => {
         para="Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
       ></Cover>
       <div className="size margin">
-        <MenuCategory items={pizza}></MenuCategory>
-        <div className="text-center ">
-          <Button name="ORDER YOUR FAVOURITE FOOD"></Button>
-        </div>
+        <MenuCategory items={pizza} title="pizza"></MenuCategory>
       </div>
       {/* salad items */}
       <Cover
@@ -68,10 +58,7 @@ const Menu = () => {
         para="Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
       ></Cover>
       <div className="size margin">
-        <MenuCategory items={salad}></MenuCategory>
-        <div className="text-center ">
-          <Button name="ORDER YOUR FAVOURITE FOOD"></Button>
-        </div>
+        <MenuCategory items={salad} title="salad"></MenuCategory>
       </div>
       {/* shop items */}
       <Cover
@@ -80,10 +67,7 @@ const Menu = () => {
         para="Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
       ></Cover>
       <div className="size margin">
-        <MenuCategory items={soup}></MenuCategory>
-        <div className="text-center ">
-          <Button name="ORDER YOUR FAVOURITE FOOD"></Button>
-        </div>
+        <MenuCategory items={soup} title="soup"></MenuCategory>
       </div>
     </>
   );
