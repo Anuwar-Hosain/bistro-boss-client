@@ -9,3 +9,9 @@
 .margin {
   margin: 50px auto;
 }
+.drawer-side a.active {
+  color: white;
+}
+.drawer-side a {
+  background-color: transparent;
+}
