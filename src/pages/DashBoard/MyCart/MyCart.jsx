@@ -33,7 +33,7 @@ const MyCart = () => {
     });
   };
   return (
-    <div className="size h-[85vh] overflow-x-scroll bg-slate-400 p-24">
+    <div className="size h-[85vh] bg-slate-400 p-24">
       <Helmet>
         <title>Bistro Boss | My Cart</title>
       </Helmet>
@@ -42,7 +42,7 @@ const MyCart = () => {
         <h3 className="text-3xl">Total Price: ${total}</h3>
         <button className="btn btn-warning btn-sm">PAY</button>
       </div>
-      <div className="overflow-x-auto w-full">
+      <div className="overflow-x-auto w-full h-[90%]">
         <table className="table w-full">
           {/* head */}
           <thead>
