@@ -3,6 +3,7 @@ import { useState } from "react";
 import useAuth from "../../../../hooks/useAuth";
 import useAxiosSecure from "../../../../hooks/useAxiosSecure";
 import { useEffect } from "react";
+// import "./CheckoutForm.css";
 
 const CheckoutForm = ({ cart, price }) => {
   const stripe = useStripe();
@@ -89,9 +90,10 @@ const CheckoutForm = ({ cart, price }) => {
       });
     }
   };
+
   return (
     <>
-      <form onSubmit={handleSubmit}>
+      <form className="w-2/3 m-8" onSubmit={handleSubmit}>
         <CardElement
           options={{
             style: {
@@ -108,11 +110,20 @@ const CheckoutForm = ({ cart, price }) => {
             },
           }}
         />
-        <button type="submit" disabled={!stripe}>
+        <button
+          className="btn btn-primary btn-sm mt-4"
+          type="submit"
+          disabled={!stripe || !clientSecret || processing}
+        >
           Pay
         </button>
       </form>
       {cardError && <p className="text-red-600 ml-8">{cardError}</p>}
+      {transactionId && (
+        <p className="text-green-500">
+          Transaction complete with transactionId: {transactionId}
+        </p>
+      )}
     </>
   );
 };
