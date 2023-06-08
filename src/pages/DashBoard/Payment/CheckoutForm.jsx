@@ -1,7 +1,7 @@
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import { useState } from "react";
-import useAuth from "../../../../hooks/useAuth";
-import useAxiosSecure from "../../../../hooks/useAxiosSecure";
+import useAuth from "../../../hooks/useAuth";
+import useAxiosSecure from "../../../hooks/useAxiosSecure";
 import { useEffect } from "react";
 // import "./CheckoutForm.css";
 

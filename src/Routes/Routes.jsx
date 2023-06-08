@@ -5,14 +5,16 @@ import Menu from "../pages/Menu/Menu/Menu";
 import Order from "../pages/Order/Order/Order";
 import Login from "../pages/Login/Login";
 import SignUp from "../pages/SignUp/SignUp";
-import DashBoard from "../Layout/dashboard";
-import MyCart from "../pages/Dashboard/MyCart/MyCart";
 import PrivateRoute from "./PrivateRoute";
 import AllUsers from "../pages/DashBoard/AllUsers/AllUsers";
 import AddItems from "../pages/DashBoard/AddItems/AddItems";
 import AdminRoute from "./adminRoute";
 import ManageItems from "../pages/DashBoard/ManageItems/ManageItems";
-import Payment from "../pages/DashBoard/AddItems/Payment/Payment";
+import Payment from "../pages/DashBoard/Payment/Payment";
+import DashBoard from "../Layout/DashBoard";
+import MyCart from "../pages/DashBoard/MyCart/MyCart";
+import UserHome from "../pages/DashBoard/UserHome/UserHome";
+import AdminHome from "../pages/DashBoard/AdminHome/AdminHome";
 
 export const router = createBrowserRouter([
   {
@@ -51,6 +53,10 @@ export const router = createBrowserRouter([
     ),
     children: [
       {
+        path: "user-home",
+        element: <UserHome></UserHome>,
+      },
+      {
         path: "mycart",
         element: <MyCart></MyCart>,
       },
@@ -59,6 +65,14 @@ export const router = createBrowserRouter([
         element: <Payment></Payment>,
       },
       // admin routes
+      {
+        path: "admin-home",
+        element: (
+          <AdminRoute>
+            <AdminHome></AdminHome>
+          </AdminRoute>
+        ),
+      },
       {
         path: "allusers",
         element: (
